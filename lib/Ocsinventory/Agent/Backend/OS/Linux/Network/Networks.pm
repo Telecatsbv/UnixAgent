@@ -131,6 +131,8 @@ sub run {
             } elsif ($line =~ /inet6 (\S+)\/(\d{2})/i){
                 $ipaddress = $1; 
                 $mask6 = $2; 
+            } else {
+                next;
             }
     
             if (ip_is_ipv4($ipaddress)){
